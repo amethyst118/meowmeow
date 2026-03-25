@@ -11,23 +11,39 @@ public class GameStateManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        SetGameState(CurrentState);
     }
 
     // Update is called once per frame
     void Update()
+    
     {
         if (Input.GetButtonDown("Pause"))
         {
             Time.timeScale = 0.0f;
         }
+
+    }
+    public void StartGame()
+    {
+        SetGameState(GameState.Running);
     }
     private void SetGameState(GameState newState)
     {
-        Time.timeScale = 0.0f;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-#Dopuisaæ_resztê
+        if (newState == GameState.Paused)
+        {
+            Time.timeScale = 0.0f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+        }
+        else if (newState == GameState.Running) 
+        {
+            Time.timeScale = 1.0f;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        CurrentState = newState;
     }
 }
 

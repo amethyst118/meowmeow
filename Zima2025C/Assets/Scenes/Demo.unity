@@ -22040,6 +22040,50 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2114565109403461609, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141048092255929875, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141048092255929875, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141048092255929875, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141048092255929875, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141048092255929875, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475912922806040857, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475912922806040857, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475912922806040857, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475912922806040857, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475912922806040857, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7536282984314903399, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
       propertyPath: m_Name
       value: menu ui
@@ -22122,6 +22166,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919984371058094268, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148019927752732612, guid: d752f08f0c4ee014e9094af9e58c7dd0, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
