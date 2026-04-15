@@ -8,15 +8,20 @@ public class PauseMenuHandler : MonoBehaviour
 
     public Slider MySlider;
     public TMP_Text MyText;
+    public Animator Animator;
     void Start()
     {
         var goGameManagerRef = GameObject.FindGameObjectWithTag("GameController");
         myGameStateManagerRef = goGameManagerRef.GetComponent<GameStateManager>();
+
+        if (Animator == null)
+            Animator = GetComponent<Animator>();
     }
 
     public void OnResumeButton_Clicked()
     {
-        myGameStateManagerRef.StartGame();
+        // myGameStateManagerRef.StartGame();
+        Animator.SetBool("IsVisible", false);
     }
     public void OnExitButton_Clicked()
     {
