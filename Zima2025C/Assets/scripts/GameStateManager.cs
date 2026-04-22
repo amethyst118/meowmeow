@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
@@ -8,6 +9,7 @@ public class GameStateManager : MonoBehaviour
         Running
     }
     public GameState CurrentState;
+    public Action OnPauseGame;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,12 +18,20 @@ public class GameStateManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    
+
     {
         if (Input.GetButtonDown("Pause"))
         {
-            Time.timeScale = 0.0f;
+            if (CurrentState == GameState.Paused)
+            {
+                SetGameState(GameState.Running);
+            }
+            else if (CurrentState == GameState.Running)
+            {
+                SetGameState(GameState.Paused);
+            }
         }
+        
 
     }
     public void StartGame()
@@ -35,6 +45,9 @@ public class GameStateManager : MonoBehaviour
             Time.timeScale = 0.0f;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            //if (OnPauseGame !=null)
+            OnPauseGame?.Invoke();
+
 
         }
         else if (newState == GameState.Running) 

@@ -13,7 +13,7 @@ public class PauseMenuHandler : MonoBehaviour
     {
         var goGameManagerRef = GameObject.FindGameObjectWithTag("GameController");
         myGameStateManagerRef = goGameManagerRef.GetComponent<GameStateManager>();
-
+        myGameStateManagerRef.OnPauseGame += ShowPauseMenu;
         if (Animator == null)
             Animator = GetComponent<Animator>();
     }
@@ -22,6 +22,15 @@ public class PauseMenuHandler : MonoBehaviour
     {
         // myGameStateManagerRef.StartGame();
         Animator.SetBool("IsVisible", false);
+    }
+
+    public void ShowPauseMenu()
+    {
+        Animator.SetBool("IsVisible", true);
+    }
+    public void ResumeGame()
+    {
+        myGameStateManagerRef.StartGame();
     }
     public void OnExitButton_Clicked()
     {
